@@ -188,11 +188,9 @@ body .wrapper .expSect .cardContainer {
   height: 100%;
   margin-top: 3%;
   grid-gap: 1em;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
-  -ms-grid-rows: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
-      grid-template-areas: "card1 card2 card3" "card4 card5 card6";
+  -ms-grid-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-areas: "card1 card2 card3";
 }
 
 body .wrapper .expSect .cardContainer .card {
@@ -203,34 +201,26 @@ body .wrapper .expSect .cardContainer .card {
   padding: 3%;
 }
 
-body .wrapper .expSect .card1 {
+body .wrapper .expSect .cardContainer img {
+  width: 100%;
+}
+
+body .wrapper .expSect .cardContainer .card1 {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: card1;
 }
 
-body .wrapper .expSect .card2 {
+body .wrapper .expSect .cardContainer .card2 {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: card2;
 }
 
-body .wrapper .expSect .card3 {
+body .wrapper .expSect .cardContainer .card3 {
   -ms-grid-row: 1;
   -ms-grid-column: 3;
   grid-area: card3;
-}
-
-body .wrapper .expSect .card4 {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  grid-area: card4;
-}
-
-body .wrapper .expSect .card5 {
-  -ms-grid-row: 2;
-  -ms-grid-column: 2;
-  grid-area: card5;
 }
 
 @-webkit-keyframes fadein {
