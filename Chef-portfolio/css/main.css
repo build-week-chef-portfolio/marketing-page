@@ -144,7 +144,7 @@ body .wrapper .introSect h1 {
 }
 
 body .wrapper .introSect p {
-  font-size: 1em;
+  font-size: 1vmax;
   letter-spacing: 2.5px;
 }
 
