@@ -58,6 +58,7 @@ body {
     background-color: map-get($colors , bodyColor );
     background-size: 100%;
     background-attachment: fixed;
+    height: 100%;
 
 
 
@@ -89,7 +90,7 @@ body {
     }
 
     .wrapper {
-        height: 200vh;
+        height: auto;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -149,7 +150,7 @@ body {
             justify-content: flex-start;
             align-items: flex-end;
             margin-top: 10%;
-            height: 65vh;
+            height: 65vw;
             width: 100%;
             color: map-get($colors , accentColor3 ); 
 
@@ -170,14 +171,12 @@ body {
                 .card {
                     background-color: map-get($colors , accentColor2 );
                     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-                    
-                    margin: 1%;
-                    padding: 3%;
+                    margin: auto;
+                    padding:3%;
                 }
-
-                img {
-                    width: 100%;
-                }
+                 img{
+                     max-width: 100%;
+                 }
 
               
               .card1 { grid-area: card1; }
@@ -189,7 +188,72 @@ body {
             }
         }
     }
+// recipe content and styling
+    .recipes{
+        display: flex;
+        flex-direction:row;
+        flex-wrap:wrap;
+        justify-content: space-between;
+        max-width: 100%;
+        height: auto;
+        margin: auto;
+        h1{
+            text-align: center;
+            font-size: 2.5rem;
+        }
+        h2{
+            text-align: center;
+            font-size:1.5rem;
+        }
+        h3{
+            text-align: center;
+            font-size: 1.2rem;
+            text-transform: capitalize;
+            font-weight: bold;
+        }
+        h4{
+            font-size: 1rem;
+            text-transform: capitalize;
+        }
+        
+        
+        .recipe-content{
+            max-width: 100%;
+            height:15%;
+            display: flex;
+            flex-direction: row;
+            border: solid gray 1px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+            margin: auto;
+            margin-bottom: 20px;
 
+
+        }
+        .recipe-header{
+            width: 100%;
+            height: 30%;
+            background-color: #351431;
+            text-align: center;
+            text-transform: capitalize;
+            color: white;
+            border: 1px  solid black;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+                margin: auto;
+                margin-bottom:5%;
+                padding: 2%;
+        }
+        .recipe-img{
+            max-width: 22%;
+            max-height:5%;
+            margin-right: auto;
+        }
+        .recipe-area{
+         max-width:70%;
+         padding:2%;
+         margin:auto;
+        }
+    }
+// recipe styling ends here
     @keyframes fadein {
         from {
             opacity:.1;
@@ -198,36 +262,40 @@ body {
             opacity:1;
         }
     }
-}
 
-footer {
 
-    nav {
-        width: 100%;
-        height: 10vh;
-        display: flex;
-        flex-direction: row;
-        background-color: map-get($colors , primaryColor );
-        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-    
-        ul {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            flex-direction: row;
+    footer {
+        
+
+
+        nav {
             width: 100%;
-            
+            height: 10vh;
+            display: flex;
+            flex-direction: row;
+            background-color: map-get($colors , primaryColor3 );
+            box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+        
+            ul {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                flex-direction: row;
+                width: 100%;
                 
-            li a {
-                color: map-get($colors , accentColor3 ); 
-                text-decoration: none;
-                font-size: 1.2em;
-                font-weight: 300;
-                letter-spacing: 2.5px;
-                text-transform: uppercase;
-            }
-        }   
+                    
+                li a {
+                    color: map-get($colors , accentColor3 ); 
+                    text-decoration: none;
+                    font-size: 1.2em;
+                    font-weight: 300;
+                    letter-spacing: 2.5px;
+                    text-transform: uppercase;
+                }
+            }   
+        }
     }
-}
 
+    
+}
 
