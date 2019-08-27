@@ -66,10 +66,9 @@ body {
         width: 100%;
         height: 10vh;
         display: flex;
-        
         flex-direction: row;
         background-color: map-get($colors , primaryColor );
-        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 
         ul {
             display: flex;
@@ -102,7 +101,7 @@ body {
         padding-left:  20px; 
         animation: fadein 2s;
 
-
+ 
         .line {
             width: 100%;
             height: 1.3px;
@@ -116,7 +115,7 @@ body {
             padding: 3%;
             margin-top: 5%; 
             color: map-get($colors , accentColor1 );
-            background-image: url(/img/chef.jpg);
+            background-image: url(../img/chef-1245676_640.jpg);
             box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
             background-repeat: no-repeat;
             background-size: cover;
@@ -130,10 +129,194 @@ body {
                 display: block;
             }
 
+            h2 {
+                font-size: 1.5em;
+                text-transform: uppercase;
+                font-weight: 300;
+                letter-spacing: 1px;
+                display: block;
+                margin-bottom: 5%;
+            }
+
             p {
                 font-size: 1vmax;
                 letter-spacing: 2.5px;
             }
+
+            button {
+                display: inline-block;
+                text-decoration: none;
+                margin: 0.2rem 0.1rem;
+                padding: 0.7rem 1.2rem;
+                background-color: map-get($colors , accentColor2 );
+                transition: all ease .3s;
+                font-size: 1.1rem;
+                border-radius: 5px;
+                color: map-get($colors , accentColor1 );
+            }
+
+            button:hover {
+                background-color: map-get($colors , accentColor1 );
+                color: map-get($colors , accentColor3 );
+                box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+            }
+
+            .mask {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(52, 73, 94, 0.8);
+                z-index: 50;
+                visibility: hidden;
+                opacity: 0;
+                transition: 0.5s;
+              }
+
+              .modal {
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                width: 600px;
+                height: 500px;
+                margin-left: -200px;
+                margin-top: -150px;
+                background: #bdc3c7;
+                z-index: 100;
+                visibility: hidden;
+                opacity: 0;
+                transition: 0.5s ease-out;
+                transform: translateY(45px);
+                box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+
+                .next {
+                    position: absolute;
+                    right: 0%;
+                }
+                
+                h2 {
+                    font-size: 2em;
+                    letter-spacing: 1.3px;
+                    font: 300;
+                    text-transform: uppercase;
+                }
+
+                form {
+                    width: 80%;
+                    display: flex;
+                    flex-direction: column;
+                    margin: 20px;
+                    padding: 20px;
+                    color: map-get($colors , accentColor3 );
+                    
+
+                    fieldset {
+                        padding: 0;
+                        margin: 5%;
+                        border: none;
+                        overflow: visible;
+                    }
+
+
+                    input {
+                        box-sizing: border-box;
+                        width: 100%;
+                        padding: 12px 10px 8px;
+                        border: none;
+                        border-radius: 0;
+                        box-shadow: none;
+                        border-bottom: 1px solid #DDD;
+                        font-size: 120%;
+                        outline: none;
+                        cursor: text;
+                        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+
+                        &::-webkit-input-placeholder {
+                            transition: color 300ms ease;
+                        }
+
+                        &:not(:focus)::-webkit-input-placeholder {
+                            color: transparent;
+                        }
+                    }
+
+                    hr {
+                        content: '';
+                        display: block;
+                        margin: 0;
+                        padding: 0;
+                        width: 100%;
+                        height: 2px;
+                        border: none;
+                        background: map-get($colors , accentColor3);
+                        font-size: 1px;
+                        will-change: transform, visibility;
+                        transition: all 200ms ease-out;
+                        transform: scaleX(0);
+                        visibility: hidden;
+                        z-index: 10;
+                    }
+
+                    input:focus ~ hr {
+                        transform: scaleX(1);
+                        visibility: visible;
+                    }
+ 
+                    label {
+                        position: absolute;
+                        top: 25%;
+                        font-size: 120%;
+                        color: map-get($colors , accentColor3);
+                        transform-origin: 10% 10%;
+                        transition: transform 450ms ease;
+                        pointer-events: none;
+                        visibility: hidden;
+                    }
+                    
+                    input:focus ~ label,
+                    input:valid ~ label {
+                        transform: scale(1.3);
+                        visibility: visible;
+                        font: 300;
+                    }
+                }
+
+                .signUpWrapper {
+                    color: map-get($colors , accentColor3);
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: center;
+                    margin-right: auto; 
+                    margin-left:  auto; 
+                    height: 450px;
+                    width: 525px;
+                }
+
+                .signInWrapper {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-right: auto; 
+                    margin-left:  auto; 
+                    height: 450px;
+                    width: 525px;
+                    visibility: hidden;
+                }
+
+              }
+
+              .active {
+                visibility: visible;
+                opacity: 1;
+              }
+
+              .active + .modal {
+                visibility: visible;
+                opacity: 1;
+                transform: translateY(0);
+              }
 
             .tittleContainer {
                 padding: 3%;
