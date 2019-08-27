@@ -61,8 +61,8 @@ body nav {
       -ms-flex-direction: row;
           flex-direction: row;
   background-color: #D1D3C4;
-  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
 body nav ul {
@@ -143,9 +143,229 @@ body .wrapper .introSect h1 {
   display: block;
 }
 
+body .wrapper .introSect h2 {
+  font-size: 1.5em;
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 5%;
+}
+
 body .wrapper .introSect p {
   font-size: 1em;
   letter-spacing: 2.5px;
+}
+
+body .wrapper .introSect button {
+  display: inline-block;
+  text-decoration: none;
+  margin: 0.2rem 0.1rem;
+  padding: 0.7rem 1.2rem;
+  background-color: #775253;
+  -webkit-transition: all ease .3s;
+  transition: all ease .3s;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  color: #BDC696;
+}
+
+body .wrapper .introSect button:hover {
+  background-color: #BDC696;
+  color: #351431;
+  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+          box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+body .wrapper .introSect .mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(52, 73, 94, 0.8);
+  z-index: 50;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+body .wrapper .introSect .modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 600px;
+  height: 500px;
+  margin-left: -200px;
+  margin-top: -150px;
+  background: #bdc3c7;
+  z-index: 100;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: 0.5s ease-out;
+  transition: 0.5s ease-out;
+  -webkit-transform: translateY(45px);
+          transform: translateY(45px);
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+body .wrapper .introSect .modal .next {
+  position: absolute;
+  right: 0%;
+}
+
+body .wrapper .introSect .modal h2 {
+  font-size: 2em;
+  letter-spacing: 1.3px;
+  font: 300;
+  text-transform: uppercase;
+}
+
+body .wrapper .introSect .modal form {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 20px;
+  padding: 20px;
+  color: #351431;
+}
+
+body .wrapper .introSect .modal form fieldset {
+  padding: 0;
+  margin: 5%;
+  border: none;
+  overflow: visible;
+}
+
+body .wrapper .introSect .modal form input {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  padding: 12px 10px 8px;
+  border: none;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-bottom: 1px solid #DDD;
+  font-size: 120%;
+  outline: none;
+  cursor: text;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+body .wrapper .introSect .modal form input::-webkit-input-placeholder {
+  -webkit-transition: color 300ms ease;
+  transition: color 300ms ease;
+}
+
+body .wrapper .introSect .modal form input:not(:focus)::-webkit-input-placeholder {
+  color: transparent;
+}
+
+body .wrapper .introSect .modal form hr {
+  content: '';
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 2px;
+  border: none;
+  background: #351431;
+  font-size: 1px;
+  will-change: transform, visibility;
+  -webkit-transition: all 200ms ease-out;
+  transition: all 200ms ease-out;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  visibility: hidden;
+  z-index: 10;
+}
+
+body .wrapper .introSect .modal form input:focus ~ hr {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  visibility: visible;
+}
+
+body .wrapper .introSect .modal form label {
+  position: absolute;
+  top: 25%;
+  font-size: 120%;
+  color: #351431;
+  -webkit-transform-origin: 10% 10%;
+          transform-origin: 10% 10%;
+  -webkit-transition: -webkit-transform 450ms ease;
+  transition: -webkit-transform 450ms ease;
+  transition: transform 450ms ease;
+  transition: transform 450ms ease, -webkit-transform 450ms ease;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+body .wrapper .introSect .modal form input:focus ~ label,
+body .wrapper .introSect .modal form input:valid ~ label {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+  visibility: visible;
+  font: 300;
+}
+
+body .wrapper .introSect .modal .signUpWrapper {
+  color: #351431;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: auto;
+  margin-left: auto;
+  height: 450px;
+  width: 525px;
+}
+
+body .wrapper .introSect .modal .signInWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: auto;
+  margin-left: auto;
+  height: 450px;
+  width: 525px;
+  visibility: hidden;
+}
+
+body .wrapper .introSect .active {
+  visibility: visible;
+  opacity: 1;
+}
+
+body .wrapper .introSect .active + .modal {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 
 body .wrapper .introSect .tittleContainer {
