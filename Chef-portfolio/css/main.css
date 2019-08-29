@@ -491,9 +491,16 @@ body .wrapper .expSect .recipeCard h3 {
   letter-spacing: 1.2px;
 }
 
+<<<<<<< HEAD
 body .wrapper .expSect .recipeCard p {
   margin-top: 3.5%;
   font-size: 1.2em;
+=======
+body .recipes .recipe-img {
+  max-width: 22%;
+  max-height: 7%;
+  margin-right: auto;
+>>>>>>> b80c71a112a0f1a6252ac1bc3bcceb214069f51c
 }
 
 body .wrapper .expSect .recipe1 {
