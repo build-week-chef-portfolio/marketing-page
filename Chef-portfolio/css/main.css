@@ -112,9 +112,6 @@ body .wrapper {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   margin-right: auto;
   margin-left: auto;
   max-width: 1500px;
@@ -132,22 +129,26 @@ body .wrapper .line {
   background-color: #BDC696;
 }
 
-body .wrapper .introSect {
-  height: 100vh;
-  width: 100vw;
-  padding: 3%;
+body .wrapper .tittleContainer {
+  position: fixed;
   color: #BDC696;
-  background-image: url(../../img/chef.jpg);
-  background-attachment: fixed;
-  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top;
-  z-index: 1;
+  padding: 2%;
+  margin: 1%;
+  max-width: 350px;
+  height: 105%;
+  background-color: #775253;
+  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+          box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  z-index: 3;
 }
 
-body .wrapper .introSect h1 {
+body .wrapper .tittleContainer svg {
+  position: absolute;
+  right: 0;
+  top: 0%;
+}
+
+body .wrapper .tittleContainer h1 {
   font-size: 2.5em;
   text-transform: uppercase;
   font-weight: 300;
@@ -155,7 +156,7 @@ body .wrapper .introSect h1 {
   display: block;
 }
 
-body .wrapper .introSect h2 {
+body .wrapper .tittleContainer h2 {
   font-size: 1.5em;
   text-transform: uppercase;
   font-weight: 300;
@@ -164,12 +165,12 @@ body .wrapper .introSect h2 {
   margin-bottom: 5%;
 }
 
-body .wrapper .introSect p {
+body .wrapper .tittleContainer p {
   font-size: 1em;
   letter-spacing: 2.5px;
 }
 
-body .wrapper .introSect button {
+body .wrapper .tittleContainer button {
   display: inline-block;
   text-decoration: none;
   margin: 0.2rem 0.1rem;
@@ -182,14 +183,14 @@ body .wrapper .introSect button {
   color: #BDC696;
 }
 
-body .wrapper .introSect button:hover {
+body .wrapper .tittleContainer button:hover {
   background-color: #BDC696;
   color: #351431;
   -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
           box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
-body .wrapper .introSect .mask {
+body .wrapper .tittleContainer .mask {
   position: fixed;
   top: 0;
   left: 0;
@@ -203,7 +204,7 @@ body .wrapper .introSect .mask {
   transition: 0.5s;
 }
 
-body .wrapper .introSect .modal {
+body .wrapper .tittleContainer .modal {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -223,19 +224,19 @@ body .wrapper .introSect .modal {
           box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
-body .wrapper .introSect .modal .next {
+body .wrapper .tittleContainer .modal .next {
   position: absolute;
   right: 0%;
 }
 
-body .wrapper .introSect .modal h2 {
+body .wrapper .tittleContainer .modal h2 {
   font-size: 2em;
   letter-spacing: 1.3px;
   font: 300;
   text-transform: uppercase;
 }
 
-body .wrapper .introSect .modal form {
+body .wrapper .tittleContainer .modal form {
   width: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -249,14 +250,14 @@ body .wrapper .introSect .modal form {
   color: #351431;
 }
 
-body .wrapper .introSect .modal form fieldset {
+body .wrapper .tittleContainer .modal form fieldset {
   padding: 0;
   margin: 5%;
   border: none;
   overflow: visible;
 }
 
-body .wrapper .introSect .modal form input {
+body .wrapper .tittleContainer .modal form input {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 100%;
@@ -273,16 +274,16 @@ body .wrapper .introSect .modal form input {
           box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
-body .wrapper .introSect .modal form input::-webkit-input-placeholder {
+body .wrapper .tittleContainer .modal form input::-webkit-input-placeholder {
   -webkit-transition: color 300ms ease;
   transition: color 300ms ease;
 }
 
-body .wrapper .introSect .modal form input:not(:focus)::-webkit-input-placeholder {
+body .wrapper .tittleContainer .modal form input:not(:focus)::-webkit-input-placeholder {
   color: transparent;
 }
 
-body .wrapper .introSect .modal form hr {
+body .wrapper .tittleContainer .modal form hr {
   content: '';
   display: block;
   margin: 0;
@@ -301,13 +302,13 @@ body .wrapper .introSect .modal form hr {
   z-index: 10;
 }
 
-body .wrapper .introSect .modal form input:focus ~ hr {
+body .wrapper .tittleContainer .modal form input:focus ~ hr {
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
   visibility: visible;
 }
 
-body .wrapper .introSect .modal form label {
+body .wrapper .tittleContainer .modal form label {
   position: absolute;
   top: 25%;
   font-size: 120%;
@@ -322,15 +323,15 @@ body .wrapper .introSect .modal form label {
   visibility: hidden;
 }
 
-body .wrapper .introSect .modal form input:focus ~ label,
-body .wrapper .introSect .modal form input:valid ~ label {
+body .wrapper .tittleContainer .modal form input:focus ~ label,
+body .wrapper .tittleContainer .modal form input:valid ~ label {
   -webkit-transform: scale(1.3);
           transform: scale(1.3);
   visibility: visible;
   font: 300;
 }
 
-body .wrapper .introSect .modal .signUpWrapper {
+body .wrapper .tittleContainer .modal .signUpWrapper {
   color: #351431;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -351,7 +352,7 @@ body .wrapper .introSect .modal .signUpWrapper {
   width: 525px;
 }
 
-body .wrapper .introSect .modal .signInWrapper {
+body .wrapper .tittleContainer .modal .signInWrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -368,34 +369,31 @@ body .wrapper .introSect .modal .signInWrapper {
   visibility: hidden;
 }
 
-body .wrapper .introSect .active {
+body .wrapper .tittleContainer .active {
   visibility: visible;
   opacity: 1;
 }
 
-body .wrapper .introSect .active + .modal {
+body .wrapper .tittleContainer .active + .modal {
   visibility: visible;
   opacity: 1;
   -webkit-transform: translateY(0);
           transform: translateY(0);
 }
 
-body .wrapper .introSect .tittleContainer {
-  position: fixed;
-  padding: 2%;
-  margin: 1%;
-  max-width: 350px;
-  height: 105%;
-  background-color: #775253;
-  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-          box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-  z-index: 3;
-}
-
-body .wrapper .introSect .tittleContainer svg {
-  position: absolute;
-  right: 0;
-  top: 0%;
+body .wrapper .introSect {
+  height: 100vh;
+  width: 100vw;
+  padding: 3%;
+  color: #BDC696;
+  background-image: url(../../img/chef.jpg);
+  background-attachment: fixed;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  z-index: 1;
 }
 
 body .wrapper .expSect {
@@ -444,9 +442,9 @@ body .wrapper .expSect .recipeCard {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -468,6 +466,8 @@ body .wrapper .expSect .recipeCard .imgContainer img {
   max-width: 320px;
   max-height: 300px;
   min-height: 300px;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
 body .wrapper .expSect .recipeCard .textWrapper {
@@ -491,16 +491,9 @@ body .wrapper .expSect .recipeCard h3 {
   letter-spacing: 1.2px;
 }
 
-<<<<<<< HEAD
 body .wrapper .expSect .recipeCard p {
   margin-top: 3.5%;
   font-size: 1.2em;
-=======
-body .recipes .recipe-img {
-  max-width: 22%;
-  max-height: 7%;
-  margin-right: auto;
->>>>>>> b80c71a112a0f1a6252ac1bc3bcceb214069f51c
 }
 
 body .wrapper .expSect .recipe1 {
