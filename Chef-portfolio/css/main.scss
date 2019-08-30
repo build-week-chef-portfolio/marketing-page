@@ -389,7 +389,7 @@ body {
             height: 100vh;
             padding: 3%;
             color: map-get($colors , accentColor1 );
-            background-image: url(../../img/chef.jpg);
+            background-image: url("../../img/chef.jpg");
             background-attachment: fixed;
             box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
             background-repeat: no-repeat;
@@ -401,7 +401,7 @@ body {
                 height: 100vh;
                 width: 100vw;
                 color: map-get($colors , accentColor1 );
-                background-image: url(../../img/chef.jpg);
+                background-image: url("../../img/chef.jpg");
                 background-attachment: fixed;
                 box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
                 background-repeat: no-repeat;
